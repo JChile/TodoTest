@@ -6,12 +6,11 @@ import com.amplifyframework.AmplifyException
 import com.amplifyframework.core.Amplify
 import com.amplifyframework.datastore.AWSDataStorePlugin
 import com.amplifyframework.api.aws.AWSApiPlugin
-
-
+import dagger.hilt.android.HiltAndroidApp
+@HiltAndroidApp
 class MyAmplifyApp : Application() {
     override fun onCreate() {
         super.onCreate()
-
         try {
             Amplify.addPlugin(AWSApiPlugin())
             Amplify.addPlugin(AWSDataStorePlugin())
