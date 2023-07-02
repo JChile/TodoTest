@@ -61,7 +61,6 @@ fun NavGraph (navController: NavHostController){
 
     val viewModel = hiltViewModel<ViewSensor>()
     val sensors = viewModel.sensorPagingFlow.collectAsLazyPagingItems()
-
     NavHost(
         navController = navController,
         startDestination = NavRoutes.List.route

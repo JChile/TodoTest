@@ -18,7 +18,6 @@ object AppModule {
     @Provides
     @Singleton
     fun provideSensorDataPager(): Pager<Int, Todo> {
-
         return Pager(
             config = PagingConfig(pageSize = 10),
             pagingSourceFactory = { Getdata() }
